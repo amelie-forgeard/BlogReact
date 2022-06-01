@@ -28,16 +28,16 @@ function App() {
     return (
         <Router>
             <nav>
-                <Link to="/"> Home </Link>
+                <Link to="/"> Accueil </Link>
                 {/* si je ne suis pas connecté, je vois le lien pour se logger: 
 et à l'inverse quand je suis connecté, je ne vois plus le lien Se connecter */}
                 {!isAuth ? (
-                    <Link to="/login"> Login </Link>
+                    <Link to="/login"> Se connecter </Link>
                 ) : (
                     <>
                         {/* et si je suis connecté, montrer le bouton Se déconnecter: */}
-                        <Link to="/createpost"> Create Post </Link>
-                        <button onClick={signUserOut}> Log Out</button>
+                        <Link to="/createpost"> Créer un article </Link>
+                        <button onClick={signUserOut}> Déconnexion</button>
                     </>
                 )}
             </nav>
